@@ -1,0 +1,30 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowReadIncidentFromDynamoDB",
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:GetItem"
+      ],
+      "Resource": "arn:aws:dynamodb:eu-west-2:969566116923:table/aiops-dev-incidents"
+    },
+    {
+      "Sid": "AllowRetrieveAndGenerateFromKnowledgeBase",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock:Retrieve",
+        "bedrock:RetrieveAndGenerate"
+      ],
+      "Resource": "arn:aws:bedrock:eu-west-2:969566116923:knowledge-base/MHU9P2V5TI"
+    },
+    {
+      "Sid": "AllowInvokeSelectedBedrockModel",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock:InvokeModel"
+      ],
+      "Resource": "arn:aws:bedrock:eu-west-2::foundation-model/amazon.nova-lite-v1:0"
+    }
+  ]
+}
