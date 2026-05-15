@@ -1,0 +1,22 @@
+{
+    "Version":  "2012-10-17",
+    "Statement":  [
+                      {
+                          "Effect":  "Allow",
+                          "Sid":  "AllowUpdateOnlyDemoWorkloadLambda",
+                          "Resource":  "arn:aws:lambda:eu-west-2:969566116923:function:aiops-dev-demo-workload",
+                          "Action":  [
+                                         "lambda:GetFunctionConfiguration",
+                                         "lambda:UpdateFunctionConfiguration"
+                                     ]
+                      },
+                      {
+                          "Effect":  "Allow",
+                          "Sid":  "AllowPublishApprovalNotification",
+                          "Resource":  "arn:aws:sns:eu-west-2:969566116923:Automation-aiops-dev-remediation-approvals",
+                          "Action":  [
+                                         "sns:Publish"
+                                     ]
+                      }
+                  ]
+}

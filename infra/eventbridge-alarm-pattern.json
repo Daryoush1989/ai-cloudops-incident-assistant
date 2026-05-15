@@ -1,0 +1,18 @@
+{
+    "detail":  {
+                   "alarmName":  [
+                                     "aiops-dev-demo-workload-errors-critical"
+                                 ],
+                   "state":  {
+                                 "value":  [
+                                               "ALARM"
+                                           ]
+                             }
+               },
+    "source":  [
+                   "aws.cloudwatch"
+               ],
+    "detail-type":  [
+                        "CloudWatch Alarm State Change"
+                    ]
+}

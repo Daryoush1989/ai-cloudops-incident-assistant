@@ -1,0 +1,1 @@
+{"errorMessage": "Simulated production incident: demo workload forced error", "errorType": "RuntimeError", "requestId": "2f7fb738-9c6d-41b2-a02f-6aa60bebc78b", "stackTrace": ["  File \"/var/task/lambda_function.py\", line 19, in lambda_handler\n    raise RuntimeError(\"Simulated production incident: demo workload forced error\")\n"]}

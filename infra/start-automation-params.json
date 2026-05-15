@@ -1,0 +1,14 @@
+{
+    "ApproverArn":  [
+                        "arn:aws:iam::969566116923:user/Dash"
+                    ],
+    "AutomationAssumeRole":  [
+                                 "arn:aws:iam::969566116923:role/aiops-dev-ssm-automation-role"
+                             ],
+    "NotificationArn":  [
+                            "arn:aws:sns:eu-west-2:969566116923:Automation-aiops-dev-remediation-approvals"
+                        ],
+    "FunctionName":  [
+                         "aiops-dev-demo-workload"
+                     ]
+}

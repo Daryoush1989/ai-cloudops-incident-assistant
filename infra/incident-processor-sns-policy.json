@@ -1,0 +1,11 @@
+{
+    "Version":  "2012-10-17",
+    "Statement":  [
+                      {
+                          "Effect":  "Allow",
+                          "Sid":  "AllowPublishToIncidentAlertsTopic",
+                          "Resource":  "arn:aws:sns:eu-west-2:969566116923:aiops-dev-incident-alerts",
+                          "Action":  "sns:Publish"
+                      }
+                  ]
+}

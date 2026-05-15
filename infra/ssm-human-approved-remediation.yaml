@@ -1,0 +1,66 @@
+schemaVersion: '0.3'
+description: Human-approved remediation for AI CloudOps demo workload.
+assumeRole: '{{ AutomationAssumeRole }}'
+
+parameters:
+  AutomationAssumeRole:
+    type: String
+    description: IAM role ARN used by Systems Manager Automation.
+
+  ApproverArn:
+    type: String
+    description: IAM principal ARN that can approve the remediation.
+
+  NotificationArn:
+    type: String
+    description: SNS topic ARN for approval notifications.
+
+  FunctionName:
+    type: String
+    default: aiops-dev-demo-workload
+    description: Demo Lambda function to remediate.
+
+mainSteps:
+  - name: ApproveRemediation
+    action: aws:approve
+    timeoutSeconds: 604800
+    onFailure: Abort
+    inputs:
+      NotificationArn: '{{ NotificationArn }}'
+      Message: 'Approve remediation to set FORCE_ERROR=false on the AI CloudOps demo workload.'
+      MinRequiredApprovals: 1
+      Approvers:
+        - '{{ ApproverArn }}'
+
+  - name: DisableForcedErrorSafely
+    action: aws:executeScript
+    timeoutSeconds: 120
+    inputs:
+      Runtime: python3.11
+      Handler: script_handler
+      InputPayload:
+        FunctionName: '{{ FunctionName }}'
+      Script: |-
+        import boto3
+
+        def script_handler(events, context):
+            function_name = events["FunctionName"]
+            lambda_client = boto3.client("lambda")
+
+            config = lambda_client.get_function_configuration(
+                FunctionName=function_name
+            )
+
+            variables = config.get("Environment", {}).get("Variables", {})
+            variables["FORCE_ERROR"] = "false"
+
+            response = lambda_client.update_function_configuration(
+                FunctionName=function_name,
+                Environment={"Variables": variables}
+            )
+
+            return {
+                "FunctionName": function_name,
+                "FORCE_ERROR": variables.get("FORCE_ERROR"),
+                "LastUpdateStatus": response.get("LastUpdateStatus")
+            }

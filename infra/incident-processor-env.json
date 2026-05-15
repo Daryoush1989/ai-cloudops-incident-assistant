@@ -1,0 +1,7 @@
+﻿{
+    "Variables":  {
+                      "INCIDENT_BUCKET_NAME":  "aiops-dev-incident-assistant-969566116923-eu-west-2",
+                      "INCIDENT_TABLE_NAME":  "aiops-dev-incidents",
+                      "SNS_TOPIC_ARN":  "arn:aws:sns:eu-west-2:969566116923:aiops-dev-incident-alerts"
+                  }
+}

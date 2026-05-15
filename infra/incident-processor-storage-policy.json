@@ -1,0 +1,17 @@
+{
+    "Version":  "2012-10-17",
+    "Statement":  [
+                      {
+                          "Effect":  "Allow",
+                          "Sid":  "DynamoDBPutIncidentRecord",
+                          "Resource":  "arn:aws:dynamodb:eu-west-2:969566116923:table/aiops-dev-incidents",
+                          "Action":  "dynamodb:PutItem"
+                      },
+                      {
+                          "Effect":  "Allow",
+                          "Sid":  "S3PutIncidentArtifact",
+                          "Resource":  "arn:aws:s3:::aiops-dev-incident-assistant-969566116923-eu-west-2/incidents/*",
+                          "Action":  "s3:PutObject"
+                      }
+                  ]
+}

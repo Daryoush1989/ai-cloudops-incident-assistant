@@ -1,0 +1,32 @@
+﻿{
+    "Items": [
+        {
+            "created_at": {
+                "S": "2026-05-12T17:40:52.904593+00:00"
+            },
+            "alarm_name": {
+                "S": "aiops-dev-demo-workload-errors-critical"
+            },
+            "detail_type": {
+                "S": "CloudWatch Alarm State Change"
+            },
+            "source": {
+                "S": "aws.cloudwatch"
+            },
+            "incident_id": {
+                "S": "inc-20260512174052-78f7e4ae"
+            },
+            "reason": {
+                "S": "Manual storage test for incident audit trail"
+            },
+            "severity": {
+                "S": "critical"
+            },
+            "state": {
+                "S": "ALARM"
+            }
+        }
+    ],
+    "Count": 1,
+    "ScannedCount": 1
+}

@@ -1,0 +1,7 @@
+{
+  "Variables": {
+    "INCIDENT_TABLE_NAME": "aiops-dev-incidents",
+    "KNOWLEDGE_BASE_ID": "MHU9P2V5TI",
+    "BEDROCK_MODEL_ARN": "arn:aws:bedrock:eu-west-2::foundation-model/amazon.nova-lite-v1:0"
+  }
+}

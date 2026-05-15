@@ -1,0 +1,22 @@
+{
+  "widgets": [
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 0,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "metrics": [
+          [ "AWS/Lambda", "Errors", "FunctionName", "aiops-dev-demo-workload" ],
+          [ ".", "Invocations", ".", "." ],
+          [ ".", "Duration", ".", "." ]
+        ],
+        "period": 60,
+        "stat": "Sum",
+        "region": "eu-west-2",
+        "title": "AI CloudOps Demo Workload"
+      }
+    }
+  ]
+}
