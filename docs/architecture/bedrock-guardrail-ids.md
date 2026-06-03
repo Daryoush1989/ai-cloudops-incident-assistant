@@ -5,9 +5,9 @@ Environment: dev
 AWS Region: eu-west-2
 
 Guardrail name: aiops-dev-incident-assistant-guardrail
-Guardrail ID: rx2j6rbme0lg
+Guardrail ID: <resource-id>
 Guardrail version: 2
-Guardrail ARN: arn:aws:bedrock:eu-west-2:969566116923:guardrail/rx2j6rbme0lg
+Guardrail ARN: arn:aws:bedrock:<region>:<aws-account-id>:guardrail/<resource-id>
 
 Purpose:
 Safety controls for AI CloudOps incident analysis.

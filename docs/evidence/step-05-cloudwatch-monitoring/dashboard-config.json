@@ -1,5 +1,5 @@
 ﻿{
-    "DashboardArn": "arn:aws:cloudwatch::969566116923:dashboard/aiops-dev-incident-assistant",
+    "DashboardArn": "arn:aws:cloudwatch::<aws-account-id>:dashboard/<resource-id>",
     "DashboardBody": "{\"widgets\":[{\"type\":\"metric\",\"x\":0,\"y\":0,\"width\":12,\"height\":6,\"properties\":{\"metrics\":[[\"AWS/Lambda\",\"Errors\",\"FunctionName\",\"aiops-dev-demo-workload\"],[\".\",\"Invocations\",\".\",\".\"],[\".\",\"Duration\",\".\",\".\"]],\"period\":60,\"stat\":\"Sum\",\"region\":\"eu-west-2\",\"title\":\"AI CloudOps Demo Workload\"}}]}",
     "DashboardName": "aiops-dev-incident-assistant"
 }

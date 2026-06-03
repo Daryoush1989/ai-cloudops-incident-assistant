@@ -1,11 +1,11 @@
 ﻿# Bedrock Knowledge Base IDs
 
 Knowledge base name: aiops-dev-runbook-kb
-Knowledge base ID: MHU9P2V5TI
+Knowledge base ID: <resource-id>
 
 Data source name: aiops-dev-runbook-kb
 Data source type: Amazon S3
-S3 runbook bucket: aiops-dev-incident-assistant-969566116923-eu-west-2
+S3 runbook bucket: <bucket-name>
 S3 runbook prefix: runbooks/
 
 Embedding model: amazon.titan-embed-text-v2:0
